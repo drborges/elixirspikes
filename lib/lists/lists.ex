@@ -18,4 +18,9 @@ defmodule Spikes.Lists do
   def any?(list, value) do
     any?(tail(list), value)
   end
+
+  def all?([value], value), do: true
+  def all?(list, value) do
+    all?([head(list)], value) && all?(tail(list), value)
+  end
 end
