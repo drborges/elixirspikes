@@ -1,13 +1,6 @@
 defmodule Spikes.Lists do
-  def head(list) do
-    [h | _] = list
-    h
-  end
-
-  def tail(list) do
-    [_ | t] = list
-    t
-  end
+  def head(list), do: hd list
+  def tail(list), do: tl list
 
   def at(list, 0), do: head(list)
   def at(list, index), do: tail(list) |> at(index-1)
