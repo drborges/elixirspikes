@@ -25,5 +25,8 @@ defmodule Spikes.ListsTest do
     assert Spikes.Lists.all?([1], 1) == true
     assert Spikes.Lists.all?([1, 1], 1) == true
     assert Spikes.Lists.all?([1, 1, 1], 1) == true
+
+    assert Spikes.Lists.all?([1, 1, 1, 2], 1) == false
+    assert Spikes.Lists.all?([], 1) == false
   end
 end
