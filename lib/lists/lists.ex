@@ -18,7 +18,7 @@ defmodule Spikes.Lists do
 
   def all?([], _), do: false
   def all?([value], value), do: true
-  def all?([_], value), do: false
+  def all?([_], _), do: false
   def all?([value | tail], value), do: all?(tail, value)
 
   def prepend(list, value), do: [value] ++ list
