@@ -19,6 +19,10 @@ defmodule Spikes.ListsTest do
     assert Spikes.Lists.any?([1], 1) == true
     assert Spikes.Lists.any?([1, 2, 3], 2) == true
     assert Spikes.Lists.any?([1, 2, 3], 3) == true
+
+    assert Spikes.Lists.any?([], 1) == false
+    assert Spikes.Lists.any?([2], 1) == false
+    assert Spikes.Lists.any?([2, 3], 1) == false
   end
 
   test "checks if all values in the list match a given value" do
