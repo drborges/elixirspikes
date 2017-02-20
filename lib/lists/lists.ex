@@ -13,4 +13,9 @@ defmodule Spikes.Lists do
   def at(list, index) do
     at(tail(list), index-1)
   end
+
+  def any?([value | _], value), do: true
+  def any?(list, value) do
+    any?(tail(list), value)
+  end
 end

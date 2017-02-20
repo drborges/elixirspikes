@@ -14,4 +14,10 @@ defmodule Spikes.ListsTest do
     assert Spikes.Lists.at([1, 2, 3], 1) == 2
     assert Spikes.Lists.at([1, 2, 3], 2) == 3
   end
+
+  test "checks if value is present in the list" do
+    assert Spikes.Lists.any?([1], 1) == true
+    assert Spikes.Lists.any?([1, 2, 3], 2) == true
+    assert Spikes.Lists.any?([1, 2, 3], 3) == true
+  end
 end
