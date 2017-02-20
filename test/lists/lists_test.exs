@@ -34,4 +34,10 @@ defmodule Spikes.ListsTest do
     assert Spikes.Lists.all?([2], 1) == false
     assert Spikes.Lists.all?([], 1) == false
   end
+
+  test "prepends item to the list" do
+    assert Spikes.Lists.prepend([], 0) == [0]
+    assert Spikes.Lists.prepend([0], 1) == [1, 0]
+    assert Spikes.Lists.prepend([0, 1], 2) == [2, 0, 1]
+  end
 end
