@@ -22,4 +22,5 @@ defmodule Spikes.Lists do
   def all?([value | tail], value), do: all?(tail, value)
 
   def prepend(list, value), do: [value] ++ list
+  def append(list, value), do: list ++ [value]
 end

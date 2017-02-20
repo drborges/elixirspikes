@@ -40,4 +40,10 @@ defmodule Spikes.ListsTest do
     assert Spikes.Lists.prepend([0], 1) == [1, 0]
     assert Spikes.Lists.prepend([0, 1], 2) == [2, 0, 1]
   end
+
+  test "append item to the list" do
+    assert Spikes.Lists.append([], 0) == [0]
+    assert Spikes.Lists.append([0], 1) == [0, 1]
+    assert Spikes.Lists.append([0, 1], 2) == [0, 1, 2]
+  end
 end
