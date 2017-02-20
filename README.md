@@ -1,19 +1,13 @@
 # Spikes
 
-**TODO: Add description**
+Home to my elixir spikes. Expect to see some more interesting stuff in the next days to come :)
 
-## Installation
+## Spikes.Lists
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `spikes` to your list of dependencies in `mix.exs`:
+Module with some spikes around list processing
 
-```elixir
-def deps do
-  [{:spikes, "~> 0.1.0"}]
-end
+## Running the specs
+
+```shell
+$ mix test
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/spikes](https://hexdocs.pm/spikes).
-
