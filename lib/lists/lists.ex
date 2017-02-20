@@ -10,14 +10,10 @@ defmodule Spikes.Lists do
   end
 
   def at(list, 0), do: head(list)
-  def at(list, index) do
-    tail(list) |> at(index-1)
-  end
+  def at(list, index), do: tail(list) |> at(index-1)
 
   def any?([value | _], value), do: true
-  def any?(list, value) do
-    tail(list) |> any?(value)
-  end
+  def any?(list, value), do: tail(list) |> any?(value)
 
   def all?([value], value), do: true
   def all?([value | tail], value), do: all?(tail, value)
