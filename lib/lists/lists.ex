@@ -20,7 +20,6 @@ defmodule Spikes.Lists do
   end
 
   def all?([value], value), do: true
-  def all?(list, value) do
-    all?([head(list)], value) && all?(tail(list), value)
-  end
+  def all?([value | tail], value), do: all?(tail, value)
+  def all?(_, _), do: false
 end
